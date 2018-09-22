@@ -39,17 +39,17 @@
 >Similar to the previous requirement, the student will view the **QuizList** class, however to satisfy this requirement, they will only be able to view objects created by other **Student**s.  
 6. When a student is practicing a quiz, the application must do the following:
 
->To realize the requirements for practicing a quiz, I added to the design a **PracticeSesstion** class. It has as attributes the date, a **Quiz**, a **Student** object, and the final score for that session. When a **Student** practices a quiz, it will create an instance of the **PracticeSession** class and pass as parameters the **Quiz** being practiced and the **Student** taking the quiz. The primary method is the *takeQuiz()* method that also has as parameters a **Quiz** and **Student** object, which will implement the practice requirements below. The class has relationships with the **Student** class, the **Quiz** class, and the **SessionList** class. 
+>To realize the requirements for practicing a quiz, I added to the design a **PracticeSession** class. It has as attributes the date, a **Quiz**, a **Student** object, and the final score for that session. When a **Student** practices a quiz, it will create an instance of the **PracticeSession** class and pass as parameters the **Quiz** being practiced and the **Student** taking the quiz. The primary method is the *takeQuiz()* method that also has as parameters a **Quiz** and **Student** object, which will implement the practice requirements below. The class has relationships with the **Student** class, the **Quiz** class, and the **SessionList** class. 
 
 - Until all words in the quiz have been used in the current practice session: 
 >The *takeQuiz()* method will have a while loop that will call methods to satisfy all the following requirements while there are still unused words
 
 1. Display a random word in the quiz word list.
 
->the *getWord()* method in the class will select a random word from the **WordBank** in the class and display it.
+>the *getWord()* method in the class will select a random word from the word bank in the class and display it.
 
 2. Display four definitions, including the correct definition for that word (the other three definitions must be randomly selected from the union of (1) the set of definitions for the other words in the quiz and (2) the set of incorrect definitions for the quiz. 
->I created a method called getIncorrectAnswers() that will operate on the ArrayList<DictionaryEntry> attribute of the **Quiz** object to generate a set of the incorrect definitions according to the requirements. The correct definition will be takern from the attribute of the **DictionaryEntry** class.  
+>I created a method called *getIncorrectAnswers()* that will operate on the ArrayList<DictionaryEntry> attribute of the **Quiz** object to generate a set of the incorrect definitions according to the requirements. The correct definition will be taken from the attribute of the **DictionaryEntry** class.  
 
 3. Let the student select a definition and display “correct” (resp., “incorrect”) if the definition is correct (resp., incorrect).
 >I wrote the *getResult()* method that will take the **Student** answer and display either correct or incorrect, as well as save the result for calculating the quiz score.
